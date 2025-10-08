@@ -36,7 +36,6 @@ int main(void)
     Vector2 textureSize;
     Vector2 position = {screenWidth/2, screenHeight/2};
     std::string textContent;
-    textContent = "Bounces: " + std::to_string(bounceCounter);
     Texture2D dvdLogo;
 
     InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
@@ -50,6 +49,7 @@ int main(void)
     // Main game loop
     while (!WindowShouldClose())    // Detect window close button or ESC key
     {
+        textContent = "Bounces: " + std::to_string(bounceCounter);
         deltaTime = GetFrameTime();
         // Update
         //----------------------------------------------------------------------------------
